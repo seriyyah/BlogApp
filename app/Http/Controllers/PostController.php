@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class PostController extends Controller
 {
     /**
@@ -51,7 +52,8 @@ class PostController extends Controller
      */
     public function show($slug)
     {
-        $posts = \Canvas\Post::with('tags', 'topic')->published()->get();
+        $posts = \Canvas\Post::with('tags', 'topic', 'comments')->published()->get();
+
         $post = $posts->firstWhere('slug', $slug);
 
         if(optional($post)->published)

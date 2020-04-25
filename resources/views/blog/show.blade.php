@@ -34,33 +34,11 @@
             <hr>
 
             <!-- Comments Form -->
-            <div class="card my-4">
-              <h5 class="card-header">Leave a Comment:</h5>
-              <div class="card-body">
-                <form>
-                  <div class="form-group">
-                    <textarea class="form-control" rows="3"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-              </div>
-            </div>
 
-
-            <!-- Comment with nested comments -->
             <div class="media mb-4">
-              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-              <div class="media-body">
-                <h5 class="mt-0">admin</h5>
-                this section is currently no functional
-                <div class="media mt-4">
-                  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                  <div class="media-body">
-                    <h5 class="mt-0">admin</h5>
-                    to do in future updates
-                  </div>
-                </div>
 
+              <div class="media-body">
+                 @comments(['model' => $data['post']])
 
               </div>
             </div>
